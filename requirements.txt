@@ -1,3 +1,4 @@
+pipenv
 django
 whitenoise
 gunicorn
