@@ -5,5 +5,9 @@
 
 
 body{
-    background-color: rgba(162, 165, 167, 0.781);
+    background-color: rgba(231, 235, 238, 0.781);
+}
+
+.my-nav-style{
+    background-color: rgb(49, 48, 48);
 }
