@@ -2,6 +2,7 @@ pipenv
 django
 whitenoise
 gunicorn
+dotenv
 dj-database-url
 python-dotenv
 psycopg2-binary
