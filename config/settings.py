@@ -25,6 +25,15 @@ SECRET_KEY = 'cvi16)mc6m6u#8bcu^-l@yizpmu+3+%q)5n8@imyfuelr_699_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
+if not DEBUG:
+    import django_heroku
+    django_heroku.settings(local())
+
 ALLOWED_HOSTS = []
 
 
@@ -129,7 +138,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGIN_URL = "login/"
